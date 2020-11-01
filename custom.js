@@ -1,6 +1,5 @@
 let myvar = 0;
 const queryString = window.location.search;
-let inp = prompt("What's your clicker for?");
 const urlParams = new URLSearchParams(queryString);
 const nam = urlParams.get('name')
 
@@ -9,12 +8,18 @@ document.body.addEventListener("keyup", e => {
     // enter key
     myvar += 1;
 });
+
+
 setInterval(() => {
-  document.body.innerText = `${inp}: ${myvar}`;
+  if (nam == null) {
+    alert("Error! No name was provided! You will now be redirected to the home page.")
+    window.location.href = "/"
+  }
+  document.body.innerText = `${nam}: ${myvar}`;
   if (myvar < 15) {
-    document.body.innerText = `${inp}: ${myvar}
+    document.body.innerText = `${nam}: ${myvar}
       Click "Enter" to increase the value!`;
   } else {
-    document.body.innerText = `${inp}: ${myvar}`;
+    document.body.innerText = `${nam}: ${myvar}`;
   }
 }, 1);

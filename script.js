@@ -9,6 +9,8 @@ setInterval(() => {
 
 function custom() {
   var inp = prompt("What's your clicker about?");
-  if inp == 
+  if (inp == null) {}
+  else {
   window.location.href = "https://henlocake.glitch.me/custom.html?name=" + inp;
+  }
 }
