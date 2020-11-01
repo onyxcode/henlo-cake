@@ -4,5 +4,11 @@ document.body.addEventListener("keyup", (e) => {
         myvar += 1;
 })
 setInterval(() => {
-    document.body.innerText = `My var: ${myvar}`
+    document.getElementById("script-cont").innerText = `My var: ${myvar}`
 }, 1)
+
+function custom() {
+  var inp = prompt("What's your clicker about?");
+  if inp == 
+  window.location.href = "https://henlocake.glitch.me/custom.html?name=" + inp;
+}
