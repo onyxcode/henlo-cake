@@ -4,7 +4,7 @@ document.body.addEventListener("keyup", (e) => {
         myvar += 1;
 })
 setInterval(() => {
-    document.getElementById("script-cont").innerText = `My var: ${myvar}`
+    document.getElementById("script-cont").innerText = `Cakes: ${myvar}`
 }, 1)
 
 function custom() {

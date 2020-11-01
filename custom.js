@@ -9,12 +9,16 @@ document.body.addEventListener("keyup", e => {
     myvar += 1;
 });
 
-
-setInterval(() => {
-  if (nam == null) {
+if (nam == null) {
     alert("Error! No name was provided! You will now be redirected to the home page.")
     window.location.href = "/"
-  }
+}
+if (nam == "") {
+    alert("Error! No name was provided! You will now be redirected to the home page.")
+    window.location.href = "/"
+}
+else {
+ setInterval(() => {
   document.body.innerText = `${nam}: ${myvar}`;
   if (myvar < 15) {
     document.body.innerText = `${nam}: ${myvar}
@@ -22,4 +26,5 @@ setInterval(() => {
   } else {
     document.body.innerText = `${nam}: ${myvar}`;
   }
-}, 1);
+}, 1); 
+}
